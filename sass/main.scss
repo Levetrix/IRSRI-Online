@@ -1,0 +1,329 @@
+@CHARSET "ISO-8859-1";
+
+@import "foundation/settings";
+@import "foundation/components/offcanvas";
+
+@import "compass/css3";
+@import "transform/settings";
+@import "transform/flip";
+
+@import "font-awesome";
+@import "font-awesome/variables";
+
+$green: #3c5346;
+$red: #872633;
+$yellow: #dfb655;
+$black: #272328;
+$purple: #2a1f26;
+$white: #f9f9f9;
+$blue: #66B9E3;
+$charcoal: #333;
+$curse: "curse words here";
+
+@font-face {
+    font-family: "OpenSans";
+    src: url(../fonts/OpenSans-regular.ttf);
+}
+
+@font-face {
+    font-family: "OpenSansLt";
+    src: url(../fonts/opensans-light-webfont.woff);
+}
+
+
+@font-face {
+    font-family: "OpenSansLtCn";
+    src: url(../fonts/OpenSans-CondLight.ttf);
+}
+
+.nothing{
+  color:red;
+}
+
+html, body {
+	width:100%;
+	padding:0;
+	margin:0;
+}
+
+body {
+	font-family:"OpenSansLt";
+}
+
+h1,h2,h3,h4,h5 {
+  font-family:"OpenSansLt";
+}
+
+div {
+	padding:0;
+	margin:0;
+	border:0px; 
+	
+}
+
+.one {
+  text-align:center;
+  padding-top:50px;
+}
+
+.container {
+  display:block;
+  margin:0 auto;
+  text-align:center;
+  max-width:900px;
+  min-width:0px;
+  padding:0 24px;
+  
+}
+
+.topBar {
+  position:absolute;
+  top:0;
+  background-color:$charcoal;
+  height:75px;
+  display:block;
+  width:100%;
+  text-align:left;
+}
+
+.logo {
+  background-color:$blue;
+  max-height:75px;
+  margin-right:auto;
+  margin-left:20px;
+}
+
+.one h1 {
+  font-family:"OpenSans";
+  font-size:2.25em;
+  margin-bottom:36px;
+  margin-top:75px;
+  //text-transform:uppercase;
+}
+
+.aboutBox {
+  display:inline-block;
+  max-width:600px;
+  text-align:left;
+  margin-bottom:36px;
+}
+
+.one h3 {
+  text-align:center;
+  font-size:1.85em;
+  margin-bottom:36px;
+}
+
+.aboutContent {
+  font-size:.95em;
+  color:#333;
+  padding-left:12px;
+  border-left:1px $blue solid;
+}
+
+.two {
+  background-color:$charcoal;
+  text-align:center;
+  padding:36px 0;
+}
+
+.two h2 {
+  font-size:1.85em;
+  margin-bottom:24px;
+  color:#fff;
+}
+
+.profilesContainer {
+  display:block;
+  margin:0 auto;
+  text-align:center;
+  margin-bottom:36px;
+}
+
+.profile {
+  position:relative;
+  display:inline-block;
+  width:275px;
+  min-height:390px;
+  background-image:url("../img/hedengren.jpg");
+  background-position:50% 50%;
+  background-size:cover;
+  text-align:center;
+  cursor:pointer;
+  
+}
+
+.nameContainer {
+  position:absolute;
+  min-height:30px;
+  background-color:rgba(#111,.8);
+  width:100%;
+  bottom:0px;
+  padding-top:4px;
+   
+}
+
+.nameContainer span {
+  color:#fff;
+  font-size:1.15em;
+  text-align:center;
+  
+}
+
+.infoContainer {
+  display:inline-block;
+  text-align:center;
+  color:#fff;
+  max-width:600px;
+}
+
+.infoContainer h3 {
+  display:block;
+  text-align:center;
+  font-size:1.55em;
+  margin-bottom:24px;
+  color:#fff;
+  
+}
+
+.bio {
+  display:block;
+  text-align:left;
+  border-left:1px solid $blue;
+  padding-left:12px;
+}
+
+.CV {
+  margin:0 auto;
+  display:block;
+  max-width:115px;
+  font-size:1.25em;
+  padding:8px;
+  color:$blue;
+  border-top:1px #fff solid;
+  border-bottom:1px #fff solid;
+}
+
+.three {
+  text-align:center;
+  padding-top:48px;
+}
+
+.three h3 {
+  font-size:1.55em;
+  margin-bottom:24px;
+}
+
+.three h2 {
+  font-size:1.85em; 
+  margin-bottom:32px;
+  
+}
+
+.email {
+  font-size:1.85em;
+}
+
+.four {
+  background-color:$charcoal;
+  text-align:center;
+  padding:36px 0;
+  
+}
+
+.four .container {
+  padding:0;
+}
+
+.four h2 {
+  font-size:1.85em;
+  color:#fff;
+  margin-bottom:18px;
+}
+
+.groupsContainer {
+  width:900px;
+  display:block;
+  margin:0 auto;
+}
+
+.group {
+  width:33.33333%;
+  height:200px;
+  display:inline-block;
+  box-sizing:border-box;
+  background-color:transparent;
+  border:1px #fff solid;
+  vertical-align:top;
+  
+}
+
+.youtube {
+  font-size:6em;
+  color:white;
+  margin:0 auto;
+  padding-top:50px;
+}
+
+.BYUlogo {
+  height:150px;
+  margin:0 auto;
+  margin-top:24px;
+}
+
+.PRISM {
+  font-size:3.5em;
+  font-weight:500;
+  font-family:calabri;
+  color:white;
+  margin:0 auto;
+  padding-top:65px;
+  letter-spacing:4px;
+}
+
+.BYUSPE {
+  font-size:3.5em;
+  font-weight:500;
+  font-family:"calabri";
+  color:white;
+  margin:0 auto;
+  padding-top:65px;
+  letter-spacing:2px;
+}
+
+.CGPlogo {
+  max-width:250px;
+  margin:0 auto;
+  margin-top:80px;
+}
+
+.lignell1 {
+  font-family:"OpenSans";
+  font-weight:700;
+  font-size:3em;
+  color:white;
+  margin-top:50px;
+  //text-transform:uppercase;
+  
+}
+
+.lignell2 {
+  font-family:"Calisto MT";
+  letter-spacing:2px;
+  font-size:1.35em;
+  color:white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
