@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="ISO-8859-1">
+    <meta charset="UTF-8">
     <title>BYUIS GE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="stylesheets/main.css" type="text/css" />
@@ -17,6 +17,7 @@
 	<script src="js/flip.js"></script>
     <script src="js/counter.js"></script>
 	<script src="js/fadein.js"></script>
+	<script src="js/Repopulate.js"></script>
     
 
 
@@ -38,17 +39,17 @@
 	<div class="container">
 		<h2>Who We Are</h2>
 		<div class="profilesContainer">
-			<div class="profile">
+			<div class="profile" data-showid="bioparagraph1">
 				<div class="nameContainer">
 					<span>John Hedengren</span>	
 				</div>
 			</div>
-			<div class="profile">
+			<div class="profile" data-showid="bioparagraph2">
 				<div class="nameContainer">
 					<span>John Hedengren</span>	
 				</div>
 			</div>
-			<div class="profile">
+			<div class="profile" data-showid="bioparagraph3">
 				<div class="nameContainer">
 					<span>John Hedengren</span>	
 				</div>	
@@ -56,9 +57,9 @@
 		</div>
 	</div>
 	<div class="container">
-		<div class="infoContainer">
-			<h3>Bio</h3>
-			<p class="bio">John Hedengren is a chemical engineer by training with a B.S. and M.S. degree from Brigham Young
+		<figure class="infoContainer expandingForContent default">
+			<h3 class="bio hide">Bio</h3>
+			<p id="bioparagraph1" class="bio hide">ONE is a chemical engineer by training with a B.S. and M.S. degree from Brigham Young
 University, and a Ph.D. from the University of Texas at Austin. Currently he is an assistant professor 
 at Brigham Young University in the Chemical Engineering Department. Prior to BYU he worked as a 
 consultant for Celanese, SABIC Ibn Zahr, ExxonMobil, TOTAL, and other companies on optimization 
@@ -66,9 +67,36 @@ solutions for chemical manufacture and then for 5 years with ExxonMobil Chemical
 control and optimization solutions. Dr. Hedengren’s area of expertise is in process systems engineering 
 with application areas in systems biology, the oil and gas industry, smart grid optimization, unmanned 
 aerial systems, and nonlinear solver development.
+<a href="#" class="CV">View CV</a></p>
+			<p id="bioparagraph2" class="bio hide">TWO is a chemical engineer by training with a B.S. and M.S. degree from Brigham Young
+University, and a Ph.D. from the University of Texas at Austin. Currently he is an assistant professor 
+at Brigham Young University in the Chemical Engineering Department. Prior to BYU he worked as a 
+consultant for Celanese, SABIC Ibn Zahr, ExxonMobil, TOTAL, and other companies on optimization 
+solutions for chemical manufacture and then for 5 years with ExxonMobil Chemical supporting advanced
+control and optimization solutions. Dr. Hedengren’s area of expertise is in process systems engineering 
+with application areas in systems biology, the oil and gas industry, smart grid optimization, unmanned 
+aerial systems, and nonlinear solver development. then for 5 years with ExxonMobil Chemical supporting advanced
+control and optimization solutions. Dr. Hedengren’s area of expertise is in process systems engineering 
+with application areas in systems biology, the oil and gas industry, smart grid optimization, unmanned 
+aerial systems, and nonlinear solver development.
+<a href="#" class="CV">View CV</a></p>
+			<p id="bioparagraph3" class="bio hide">THREE is a chemical engineer by training with a B.S. and M.S. degree from Brigham Young
+University, and a Ph.D. from the University of Texas at Austin. Currently he is an assistant professor 
+at Brigham Young University in the Chemical Engineering Department. Prior to BYU he worked as a 
+consultant for Celanese, SABIC Ibn Zahr, ExxonMobil, TOTAL, and other companies on optimization 
+solutions for chemical manufacture and then for 5 years with ExxonMobil Chemical supporting advanced
+control and optimization solutions. Dr. Hedengren’s area of expertise is in process systems engineering 
+with application areas in systems biology, the oil and gas industry, smart grid optimization, unmanned 
+aerial systems, and nonlinear solver development. then for 5 years with ExxonMobil Chemical supporting advanced
+control and optimization solutions. Dr. Hedengren’s area of expertise is in process systems engineering 
+with application areas in systems biology, the oil and gas industry, smart grid optimization, unmanned 
+aerial systems, and nonlinear solver development. then for 5 years with ExxonMobil Chemical supporting advanced
+control and optimization solutions. Dr. Hedengren’s area of expertise is in process systems engineering 
+with application areas in systems biology, the oil and gas industry, smart grid optimization, unmanned 
+aerial systems, and nonlinear solver development.
+<a href="#" class="CV">View CV</a>
 </p>
-			<a href="#" class="CV">View CV</a>
-		</div>
+		</figure>
 	</div>
 </div>
 <div class="three">

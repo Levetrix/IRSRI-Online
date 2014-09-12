@@ -3955,13 +3955,27 @@ div {
 
 /* line 173, ../sass/main.scss */
 .infoContainer {
-  display: inline-block;
+  /*display:inline-block;*/
+  /*display:none;*/
   text-align: center;
   color: #fff;
   max-width: 600px;
+  transition-property: height;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* line 180, ../sass/main.scss */
+/* line 189, ../sass/main.scss */
+.showInfoContainer {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 195, ../sass/main.scss */
 .infoContainer h3 {
   display: block;
   text-align: center;
@@ -3970,15 +3984,20 @@ div {
   color: #fff;
 }
 
-/* line 189, ../sass/main.scss */
-.bio {
+/* line 204, ../sass/main.scss */
+p.bio {
   display: block;
   text-align: left;
   border-left: 1px solid #66b9e3;
   padding-left: 12px;
 }
 
-/* line 196, ../sass/main.scss */
+/* line 211, ../sass/main.scss */
+.showbio {
+  display: block;
+}
+
+/* line 216, ../sass/main.scss */
 .CV {
   margin: 0 auto;
   display: block;
@@ -3990,56 +4009,56 @@ div {
   border-bottom: 1px #fff solid;
 }
 
-/* line 207, ../sass/main.scss */
+/* line 227, ../sass/main.scss */
 .three {
   text-align: center;
   padding-top: 48px;
 }
 
-/* line 212, ../sass/main.scss */
+/* line 232, ../sass/main.scss */
 .three h3 {
   font-size: 1.55em;
   margin-bottom: 24px;
 }
 
-/* line 217, ../sass/main.scss */
+/* line 237, ../sass/main.scss */
 .three h2 {
   font-size: 1.85em;
   margin-bottom: 32px;
 }
 
-/* line 223, ../sass/main.scss */
+/* line 243, ../sass/main.scss */
 .email {
   font-size: 1.85em;
 }
 
-/* line 227, ../sass/main.scss */
+/* line 247, ../sass/main.scss */
 .four {
   background-color: #333333;
   text-align: center;
   padding: 36px 0;
 }
 
-/* line 234, ../sass/main.scss */
+/* line 254, ../sass/main.scss */
 .four .container {
   padding: 0;
 }
 
-/* line 238, ../sass/main.scss */
+/* line 258, ../sass/main.scss */
 .four h2 {
   font-size: 1.85em;
   color: #fff;
   margin-bottom: 18px;
 }
 
-/* line 244, ../sass/main.scss */
+/* line 264, ../sass/main.scss */
 .groupsContainer {
   width: 900px;
   display: block;
   margin: 0 auto;
 }
 
-/* line 250, ../sass/main.scss */
+/* line 270, ../sass/main.scss */
 .group {
   width: 33.33333%;
   height: 200px;
@@ -4050,7 +4069,7 @@ div {
   vertical-align: top;
 }
 
-/* line 261, ../sass/main.scss */
+/* line 281, ../sass/main.scss */
 .youtube {
   font-size: 6em;
   color: white;
@@ -4058,14 +4077,14 @@ div {
   padding-top: 50px;
 }
 
-/* line 268, ../sass/main.scss */
+/* line 288, ../sass/main.scss */
 .BYUlogo {
   height: 150px;
   margin: 0 auto;
   margin-top: 24px;
 }
 
-/* line 274, ../sass/main.scss */
+/* line 294, ../sass/main.scss */
 .PRISM {
   font-size: 3.5em;
   font-weight: 500;
@@ -4076,7 +4095,7 @@ div {
   letter-spacing: 4px;
 }
 
-/* line 284, ../sass/main.scss */
+/* line 304, ../sass/main.scss */
 .BYUSPE {
   font-size: 3.5em;
   font-weight: 500;
@@ -4087,14 +4106,14 @@ div {
   letter-spacing: 2px;
 }
 
-/* line 294, ../sass/main.scss */
+/* line 314, ../sass/main.scss */
 .CGPlogo {
   max-width: 250px;
   margin: 0 auto;
   margin-top: 80px;
 }
 
-/* line 300, ../sass/main.scss */
+/* line 320, ../sass/main.scss */
 .lignell1 {
   font-family: "OpenSans";
   font-weight: 700;
@@ -4103,10 +4122,82 @@ div {
   margin-top: 50px;
 }
 
-/* line 310, ../sass/main.scss */
+/* line 330, ../sass/main.scss */
 .lignell2 {
   font-family: "Calisto MT";
   letter-spacing: 2px;
   font-size: 1.35em;
   color: white;
+}
+
+/* line 340, ../sass/main.scss */
+.expandingForContent {
+  -webkit-transition: height;
+  -moz-transition: height;
+  -o-transition: height;
+  transition: height;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transition-property: height;
+  -moz-transition-property: height;
+  -o-transition-property: height;
+  transition-property: height;
+  -webkit-transition-duration: 1.5s;
+  -moz-transition-duration: 1.5s;
+  -o-transition-duration: 1.5s;
+  transition-duration: 1.5s;
+  position: relative;
+  display: block;
+}
+/* line 348, ../sass/main.scss */
+.expandingForContent.show {
+  /*	This needs to be calculated by javascipt	*/
+}
+/* line 351, ../sass/main.scss */
+.expandingForContent.default {
+  height: 0px;
+}
+/* line 355, ../sass/main.scss */
+.expandingForContent h3.bio {
+  position: relative;
+  top: 0em;
+}
+/* line 359, ../sass/main.scss */
+.expandingForContent .bio {
+  -webkit-transition: opacity;
+  -moz-transition: opacity;
+  -o-transition: opacity;
+  transition: opacity;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 1.5s;
+  -moz-transition-duration: 1.5s;
+  -o-transition-duration: 1.5s;
+  transition-duration: 1.5s;
+  position: absolute;
+  top: 3.1em;
+  display: block;
+}
+/* line 368, ../sass/main.scss */
+.expandingForContent .bio.show {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+/* line 371, ../sass/main.scss */
+.expandingForContent .bio.hide {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+/* line 376, ../sass/main.scss */
+.expandingForContent.fade-in {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
 }

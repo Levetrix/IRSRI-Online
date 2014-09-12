@@ -164,17 +164,32 @@ div {
 }
 
 .nameContainer span {
-  color:#fff;
-  font-size:1.15em;
-  text-align:center;
+	color:#fff;
+	font-size:1.15em;
+	text-align:center;
   
 }
 
 .infoContainer {
-  display:inline-block;
-  text-align:center;
-  color:#fff;
-  max-width:600px;
+	/*display:inline-block;*/
+	/*display:none;*/
+	text-align:center;
+	color:#fff;
+	max-width:600px;
+	transition-property: height;
+	transition-duration: 1s;
+	transition-timing-function: ease;
+	height: auto;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+
+.showInfoContainer {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
 }
 
 .infoContainer h3 {
@@ -186,13 +201,18 @@ div {
   
 }
 
-.bio {
+p.bio {
   display:block;
   text-align:left;
   border-left:1px solid $blue;
-  padding-left:12px;
+  padding-left:12px;	
 }
 
+.showbio {
+	display:block;
+	
+}
+	
 .CV {
   margin:0 auto;
   display:block;
@@ -247,7 +267,7 @@ div {
   margin:0 auto;
 }
 
-.group {
+.group { 
   width:33.33333%;
   height:200px;
   display:inline-block;
@@ -317,7 +337,46 @@ div {
 
 
 
-
+.expandingForContent {
+	@include transition(height);
+	@include transition-timing-function(ease);
+	@include transition-property(height);
+	@include transition-duration(1.5s);
+	position: relative;
+	display: block;
+	
+	&.show {
+		/*	This needs to be calculated by javascipt	*/
+	}
+	&.default {
+		height: 0px;
+	}
+	
+	& h3.bio {
+		position:relative;
+		top:0em;
+	}
+	& .bio {
+		@include transition(opacity);
+		@include transition-timing-function(ease);
+		@include transition-property(opacity);
+		@include transition-duration(1.5s);
+		position:absolute;
+		top:3.1em;
+		display: block;
+		
+		&.show {
+			@include opacity(1);	
+		}
+		&.hide {
+			@include opacity(0);	
+	
+		}
+	}
+	&.fade-in {
+		@include opacity(1);
+	}
+}
 
 
 
